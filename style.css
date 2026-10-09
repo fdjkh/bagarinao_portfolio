@@ -1,0 +1,242 @@
+```css
+/* ================= GENERAL ================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #eef7f2;
+    color: #355f4a;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+nav {
+    background: #a8d5ba;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #244d3a;
+    margin: 8px 18px;
+    font-weight: bold;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: white;
+}
+
+nav a:focus-visible {
+    outline: 2px solid #244d3a;
+    outline-offset: 5px;
+}
+
+
+/* ================= SECTIONS ================= */
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+    scroll-margin-top: 65px;
+}
+
+
+/* ================= HEADINGS ================= */
+
+h1 {
+    color: #2f7a5c;
+    font-size: 36px;
+}
+
+h2 {
+    color: #2f7a5c;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #2f7a5c;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* ================= PROFILE IMAGE ================= */
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ================= PROJECTS LAYOUT ================= */
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+/* ================= PROJECT CARD ================= */
+
+.project-card {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ================= PROJECT MEDIA ================= */
+
+.project-card img,
+.project-card video {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.project-card video {
+    max-height: 300px;
+}
+
+
+/* ================= ABOUT BOX ================= */
+
+.about-box {
+    background: white;
+    max-width: 600px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ================= CONTACT BOX ================= */
+
+.contact-info {
+    background: white;
+    max-width: 500px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #2f7a5c;
+    overflow-wrap: anywhere;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #a8d5ba;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+@media (max-width: 600px) {
+    nav {
+        padding: 10px 5px;
+    }
+
+    nav a {
+        margin: 8px;
+        font-size: 15px;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .projects {
+        gap: 20px;
+    }
+
+    .project-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .about-box,
+    .contact-info {
+        padding: 20px;
+    }
+
+    .profile-img {
+        width: 170px;
+        height: 170px;
+    }
+}
+
+
+/* ================= REDUCED MOTION ================= */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+    }
+}
+```
